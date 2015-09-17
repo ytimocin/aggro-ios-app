@@ -1,0 +1,504 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B7E684BC1BAA778E0009E9F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E684BB1BAA778E0009E9F9 /* AppDelegate.swift */; };
+		B7E684BE1BAA778E0009E9F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E684BD1BAA778E0009E9F9 /* ViewController.swift */; };
+		B7E684C11BAA778E0009E9F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7E684BF1BAA778E0009E9F9 /* Main.storyboard */; };
+		B7E684C31BAA778E0009E9F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7E684C21BAA778E0009E9F9 /* Assets.xcassets */; };
+		B7E684C61BAA778F0009E9F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7E684C41BAA778F0009E9F9 /* LaunchScreen.storyboard */; };
+		B7E684D11BAA778F0009E9F9 /* AggroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E684D01BAA778F0009E9F9 /* AggroTests.swift */; };
+		B7E684DC1BAA778F0009E9F9 /* AggroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E684DB1BAA778F0009E9F9 /* AggroUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B7E684CD1BAA778F0009E9F9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7E684B01BAA778D0009E9F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B7E684B71BAA778D0009E9F9;
+			remoteInfo = Aggro;
+		};
+		B7E684D81BAA778F0009E9F9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7E684B01BAA778D0009E9F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B7E684B71BAA778D0009E9F9;
+			remoteInfo = Aggro;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B7E684B81BAA778E0009E9F9 /* Aggro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aggro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7E684BB1BAA778E0009E9F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B7E684BD1BAA778E0009E9F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B7E684C01BAA778E0009E9F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B7E684C21BAA778E0009E9F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B7E684C51BAA778F0009E9F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B7E684C71BAA778F0009E9F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7E684CC1BAA778F0009E9F9 /* AggroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AggroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7E684D01BAA778F0009E9F9 /* AggroTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AggroTests.swift; sourceTree = "<group>"; };
+		B7E684D21BAA778F0009E9F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7E684D71BAA778F0009E9F9 /* AggroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AggroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7E684DB1BAA778F0009E9F9 /* AggroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AggroUITests.swift; sourceTree = "<group>"; };
+		B7E684DD1BAA778F0009E9F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B7E684B51BAA778D0009E9F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7E684C91BAA778F0009E9F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7E684D41BAA778F0009E9F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B7E684AF1BAA778C0009E9F9 = {
+			isa = PBXGroup;
+			children = (
+				B7E684BA1BAA778E0009E9F9 /* Aggro */,
+				B7E684CF1BAA778F0009E9F9 /* AggroTests */,
+				B7E684DA1BAA778F0009E9F9 /* AggroUITests */,
+				B7E684B91BAA778E0009E9F9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B7E684B91BAA778E0009E9F9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B7E684B81BAA778E0009E9F9 /* Aggro.app */,
+				B7E684CC1BAA778F0009E9F9 /* AggroTests.xctest */,
+				B7E684D71BAA778F0009E9F9 /* AggroUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B7E684BA1BAA778E0009E9F9 /* Aggro */ = {
+			isa = PBXGroup;
+			children = (
+				B7E684BB1BAA778E0009E9F9 /* AppDelegate.swift */,
+				B7E684BD1BAA778E0009E9F9 /* ViewController.swift */,
+				B7E684BF1BAA778E0009E9F9 /* Main.storyboard */,
+				B7E684C21BAA778E0009E9F9 /* Assets.xcassets */,
+				B7E684C41BAA778F0009E9F9 /* LaunchScreen.storyboard */,
+				B7E684C71BAA778F0009E9F9 /* Info.plist */,
+			);
+			path = Aggro;
+			sourceTree = "<group>";
+		};
+		B7E684CF1BAA778F0009E9F9 /* AggroTests */ = {
+			isa = PBXGroup;
+			children = (
+				B7E684D01BAA778F0009E9F9 /* AggroTests.swift */,
+				B7E684D21BAA778F0009E9F9 /* Info.plist */,
+			);
+			path = AggroTests;
+			sourceTree = "<group>";
+		};
+		B7E684DA1BAA778F0009E9F9 /* AggroUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B7E684DB1BAA778F0009E9F9 /* AggroUITests.swift */,
+				B7E684DD1BAA778F0009E9F9 /* Info.plist */,
+			);
+			path = AggroUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B7E684B71BAA778D0009E9F9 /* Aggro */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7E684E01BAA778F0009E9F9 /* Build configuration list for PBXNativeTarget "Aggro" */;
+			buildPhases = (
+				B7E684B41BAA778D0009E9F9 /* Sources */,
+				B7E684B51BAA778D0009E9F9 /* Frameworks */,
+				B7E684B61BAA778D0009E9F9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Aggro;
+			productName = Aggro;
+			productReference = B7E684B81BAA778E0009E9F9 /* Aggro.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B7E684CB1BAA778F0009E9F9 /* AggroTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7E684E31BAA778F0009E9F9 /* Build configuration list for PBXNativeTarget "AggroTests" */;
+			buildPhases = (
+				B7E684C81BAA778F0009E9F9 /* Sources */,
+				B7E684C91BAA778F0009E9F9 /* Frameworks */,
+				B7E684CA1BAA778F0009E9F9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B7E684CE1BAA778F0009E9F9 /* PBXTargetDependency */,
+			);
+			name = AggroTests;
+			productName = AggroTests;
+			productReference = B7E684CC1BAA778F0009E9F9 /* AggroTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B7E684D61BAA778F0009E9F9 /* AggroUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7E684E61BAA778F0009E9F9 /* Build configuration list for PBXNativeTarget "AggroUITests" */;
+			buildPhases = (
+				B7E684D31BAA778F0009E9F9 /* Sources */,
+				B7E684D41BAA778F0009E9F9 /* Frameworks */,
+				B7E684D51BAA778F0009E9F9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B7E684D91BAA778F0009E9F9 /* PBXTargetDependency */,
+			);
+			name = AggroUITests;
+			productName = AggroUITests;
+			productReference = B7E684D71BAA778F0009E9F9 /* AggroUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B7E684B01BAA778D0009E9F9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = BaseTech;
+				TargetAttributes = {
+					B7E684B71BAA778D0009E9F9 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					B7E684CB1BAA778F0009E9F9 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = B7E684B71BAA778D0009E9F9;
+					};
+					B7E684D61BAA778F0009E9F9 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = B7E684B71BAA778D0009E9F9;
+					};
+				};
+			};
+			buildConfigurationList = B7E684B31BAA778D0009E9F9 /* Build configuration list for PBXProject "Aggro" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B7E684AF1BAA778C0009E9F9;
+			productRefGroup = B7E684B91BAA778E0009E9F9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B7E684B71BAA778D0009E9F9 /* Aggro */,
+				B7E684CB1BAA778F0009E9F9 /* AggroTests */,
+				B7E684D61BAA778F0009E9F9 /* AggroUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B7E684B61BAA778D0009E9F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7E684C61BAA778F0009E9F9 /* LaunchScreen.storyboard in Resources */,
+				B7E684C31BAA778E0009E9F9 /* Assets.xcassets in Resources */,
+				B7E684C11BAA778E0009E9F9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7E684CA1BAA778F0009E9F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7E684D51BAA778F0009E9F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B7E684B41BAA778D0009E9F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7E684BE1BAA778E0009E9F9 /* ViewController.swift in Sources */,
+				B7E684BC1BAA778E0009E9F9 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7E684C81BAA778F0009E9F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7E684D11BAA778F0009E9F9 /* AggroTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7E684D31BAA778F0009E9F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7E684DC1BAA778F0009E9F9 /* AggroUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B7E684CE1BAA778F0009E9F9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B7E684B71BAA778D0009E9F9 /* Aggro */;
+			targetProxy = B7E684CD1BAA778F0009E9F9 /* PBXContainerItemProxy */;
+		};
+		B7E684D91BAA778F0009E9F9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B7E684B71BAA778D0009E9F9 /* Aggro */;
+			targetProxy = B7E684D81BAA778F0009E9F9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B7E684BF1BAA778E0009E9F9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B7E684C01BAA778E0009E9F9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B7E684C41BAA778F0009E9F9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B7E684C51BAA778F0009E9F9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B7E684DE1BAA778F0009E9F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B7E684DF1BAA778F0009E9F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B7E684E11BAA778F0009E9F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Aggro/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.basetech.Aggro;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B7E684E21BAA778F0009E9F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Aggro/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.basetech.Aggro;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B7E684E41BAA778F0009E9F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = AggroTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.basetech.AggroTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Aggro.app/Aggro";
+			};
+			name = Debug;
+		};
+		B7E684E51BAA778F0009E9F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = AggroTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.basetech.AggroTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Aggro.app/Aggro";
+			};
+			name = Release;
+		};
+		B7E684E71BAA778F0009E9F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = AggroUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.basetech.AggroUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Aggro;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		B7E684E81BAA778F0009E9F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = AggroUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.basetech.AggroUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Aggro;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B7E684B31BAA778D0009E9F9 /* Build configuration list for PBXProject "Aggro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7E684DE1BAA778F0009E9F9 /* Debug */,
+				B7E684DF1BAA778F0009E9F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B7E684E01BAA778F0009E9F9 /* Build configuration list for PBXNativeTarget "Aggro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7E684E11BAA778F0009E9F9 /* Debug */,
+				B7E684E21BAA778F0009E9F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B7E684E31BAA778F0009E9F9 /* Build configuration list for PBXNativeTarget "AggroTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7E684E41BAA778F0009E9F9 /* Debug */,
+				B7E684E51BAA778F0009E9F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B7E684E61BAA778F0009E9F9 /* Build configuration list for PBXNativeTarget "AggroUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7E684E71BAA778F0009E9F9 /* Debug */,
+				B7E684E81BAA778F0009E9F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B7E684B01BAA778D0009E9F9 /* Project object */;
+}
