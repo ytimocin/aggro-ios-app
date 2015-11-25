@@ -7,13 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B77584681C05814B00890F6C /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77584661C05814B00890F6C /* FBSDKCoreKit.framework */; };
+		B77584691C05814B00890F6C /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77584671C05814B00890F6C /* FBSDKLoginKit.framework */; };
+		B78FEDC81BAA872600285CC8 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78FEDC71BAA872600285CC8 /* WelcomeViewController.swift */; };
+		B7B57FB51BD411950013FA96 /* AggroError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B57FB41BD411950013FA96 /* AggroError.swift */; };
+		B7B57FB81BD46B9D0013FA96 /* AggroApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B57FB71BD46B9D0013FA96 /* AggroApiClient.swift */; };
+		B7B57FBA1BD46C3A0013FA96 /* AggroApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B57FB91BD46C3A0013FA96 /* AggroApiConstants.swift */; };
+		B7B57FBC1BD46C690013FA96 /* AggroApiConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B57FBB1BD46C690013FA96 /* AggroApiConvenience.swift */; };
+		B7B57FC01BD46ECE0013FA96 /* AggroApiLoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B57FBF1BD46ECE0013FA96 /* AggroApiLoginResponse.swift */; };
+		B7B57FC21BD478270013FA96 /* AggroUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B57FC11BD478270013FA96 /* AggroUser.swift */; };
+		B7B57FC41BD493B30013FA96 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B57FC31BD493B30013FA96 /* SwiftyJSON.swift */; };
+		B7B57FC71BD4A2870013FA96 /* AggroApiRegisterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B57FC61BD4A2870013FA96 /* AggroApiRegisterResponse.swift */; };
+		B7B57FC91BD4B2130013FA96 /* BadgeSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B57FC81BD4B2130013FA96 /* BadgeSelectionViewController.swift */; };
+		B7BDEF5E1BD706500036770E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BDEF5D1BD706500036770E /* RegisterViewController.swift */; };
+		B7BDEF601BD711DB0036770E /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BDEF5F1BD711DB0036770E /* ForgotPasswordViewController.swift */; };
 		B7E684BC1BAA778E0009E9F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E684BB1BAA778E0009E9F9 /* AppDelegate.swift */; };
-		B7E684BE1BAA778E0009E9F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E684BD1BAA778E0009E9F9 /* ViewController.swift */; };
 		B7E684C11BAA778E0009E9F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7E684BF1BAA778E0009E9F9 /* Main.storyboard */; };
 		B7E684C31BAA778E0009E9F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7E684C21BAA778E0009E9F9 /* Assets.xcassets */; };
 		B7E684C61BAA778F0009E9F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7E684C41BAA778F0009E9F9 /* LaunchScreen.storyboard */; };
 		B7E684D11BAA778F0009E9F9 /* AggroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E684D01BAA778F0009E9F9 /* AggroTests.swift */; };
 		B7E684DC1BAA778F0009E9F9 /* AggroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E684DB1BAA778F0009E9F9 /* AggroUITests.swift */; };
+		B7E87C101BD757C50012B61F /* AggroApiBadges.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E87C0F1BD757C50012B61F /* AggroApiBadges.swift */; };
+		B7E87C121BD758010012B61F /* AggroBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E87C111BD758010012B61F /* AggroBadge.swift */; };
+		B7E9069D1BF47022004DB8C3 /* AddGeoLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E9069C1BF4701F004DB8C3 /* AddGeoLocationViewController.swift */; };
+		B7EC06D61BDB3B8C0087D04F /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EC06D51BDB3B8B0087D04F /* ShareViewController.swift */; };
+		B7EC06D81BDB42860087D04F /* ShareBadgeSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EC06D71BDB42860087D04F /* ShareBadgeSelectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +52,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B77584661C05814B00890F6C /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		B77584671C05814B00890F6C /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		B78FEDC71BAA872600285CC8 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		B7B57FB41BD411950013FA96 /* AggroError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AggroError.swift; sourceTree = "<group>"; };
+		B7B57FB71BD46B9D0013FA96 /* AggroApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AggroApiClient.swift; sourceTree = "<group>"; };
+		B7B57FB91BD46C3A0013FA96 /* AggroApiConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AggroApiConstants.swift; sourceTree = "<group>"; };
+		B7B57FBB1BD46C690013FA96 /* AggroApiConvenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AggroApiConvenience.swift; sourceTree = "<group>"; };
+		B7B57FBF1BD46ECE0013FA96 /* AggroApiLoginResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AggroApiLoginResponse.swift; sourceTree = "<group>"; };
+		B7B57FC11BD478270013FA96 /* AggroUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AggroUser.swift; sourceTree = "<group>"; };
+		B7B57FC31BD493B30013FA96 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		B7B57FC61BD4A2870013FA96 /* AggroApiRegisterResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AggroApiRegisterResponse.swift; sourceTree = "<group>"; };
+		B7B57FC81BD4B2130013FA96 /* BadgeSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeSelectionViewController.swift; sourceTree = "<group>"; };
+		B7BDEF5D1BD706500036770E /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		B7BDEF5F1BD711DB0036770E /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		B7E684B81BAA778E0009E9F9 /* Aggro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aggro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7E684BB1BAA778E0009E9F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B7E684BD1BAA778E0009E9F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B7E684C01BAA778E0009E9F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B7E684C21BAA778E0009E9F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7E684C51BAA778F0009E9F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +78,11 @@
 		B7E684D71BAA778F0009E9F9 /* AggroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AggroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7E684DB1BAA778F0009E9F9 /* AggroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AggroUITests.swift; sourceTree = "<group>"; };
 		B7E684DD1BAA778F0009E9F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7E87C0F1BD757C50012B61F /* AggroApiBadges.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AggroApiBadges.swift; sourceTree = "<group>"; };
+		B7E87C111BD758010012B61F /* AggroBadge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AggroBadge.swift; sourceTree = "<group>"; };
+		B7E9069C1BF4701F004DB8C3 /* AddGeoLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddGeoLocationViewController.swift; sourceTree = "<group>"; };
+		B7EC06D51BDB3B8B0087D04F /* ShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		B7EC06D71BDB42860087D04F /* ShareBadgeSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareBadgeSelectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +90,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B77584681C05814B00890F6C /* FBSDKCoreKit.framework in Frameworks */,
+				B77584691C05814B00890F6C /* FBSDKLoginKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,9 +112,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B7B57FB61BD46B890013FA96 /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+				B7B57FB71BD46B9D0013FA96 /* AggroApiClient.swift */,
+				B7B57FB91BD46C3A0013FA96 /* AggroApiConstants.swift */,
+				B7B57FBB1BD46C690013FA96 /* AggroApiConvenience.swift */,
+				B7E87C0F1BD757C50012B61F /* AggroApiBadges.swift */,
+			);
+			name = Clients;
+			sourceTree = "<group>";
+		};
+		B7B57FBD1BD46EB20013FA96 /* Methods */ = {
+			isa = PBXGroup;
+			children = (
+				B7B57FC51BD4A26F0013FA96 /* Register */,
+				B7B57FBE1BD46EBB0013FA96 /* Login */,
+			);
+			name = Methods;
+			sourceTree = "<group>";
+		};
+		B7B57FBE1BD46EBB0013FA96 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				B7B57FBF1BD46ECE0013FA96 /* AggroApiLoginResponse.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		B7B57FC51BD4A26F0013FA96 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				B7B57FC61BD4A2870013FA96 /* AggroApiRegisterResponse.swift */,
+			);
+			name = Register;
+			sourceTree = "<group>";
+		};
 		B7E684AF1BAA778C0009E9F9 = {
 			isa = PBXGroup;
 			children = (
+				B77584661C05814B00890F6C /* FBSDKCoreKit.framework */,
+				B77584671C05814B00890F6C /* FBSDKLoginKit.framework */,
 				B7E684BA1BAA778E0009E9F9 /* Aggro */,
 				B7E684CF1BAA778F0009E9F9 /* AggroTests */,
 				B7E684DA1BAA778F0009E9F9 /* AggroUITests */,
@@ -98,11 +174,10 @@
 			isa = PBXGroup;
 			children = (
 				B7E684BB1BAA778E0009E9F9 /* AppDelegate.swift */,
-				B7E684BD1BAA778E0009E9F9 /* ViewController.swift */,
-				B7E684BF1BAA778E0009E9F9 /* Main.storyboard */,
-				B7E684C21BAA778E0009E9F9 /* Assets.xcassets */,
-				B7E684C41BAA778F0009E9F9 /* LaunchScreen.storyboard */,
-				B7E684C71BAA778F0009E9F9 /* Info.plist */,
+				B7E684EB1BAA77ED0009E9F9 /* Controller */,
+				B7E684EA1BAA77E80009E9F9 /* Model */,
+				B7E684E91BAA77DA0009E9F9 /* View */,
+				B7E684EC1BAA79890009E9F9 /* Supporting Files */,
 			);
 			path = Aggro;
 			sourceTree = "<group>";
@@ -123,6 +198,59 @@
 				B7E684DD1BAA778F0009E9F9 /* Info.plist */,
 			);
 			path = AggroUITests;
+			sourceTree = "<group>";
+		};
+		B7E684E91BAA77DA0009E9F9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		B7E684EA1BAA77E80009E9F9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B7B57FBD1BD46EB20013FA96 /* Methods */,
+				B7B57FB61BD46B890013FA96 /* Clients */,
+				B7E87C111BD758010012B61F /* AggroBadge.swift */,
+				B7B57FB41BD411950013FA96 /* AggroError.swift */,
+				B7B57FC11BD478270013FA96 /* AggroUser.swift */,
+				B7B57FC31BD493B30013FA96 /* SwiftyJSON.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		B7E684EB1BAA77ED0009E9F9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B78FEDC71BAA872600285CC8 /* WelcomeViewController.swift */,
+				B7B57FC81BD4B2130013FA96 /* BadgeSelectionViewController.swift */,
+				B7BDEF5D1BD706500036770E /* RegisterViewController.swift */,
+				B7BDEF5F1BD711DB0036770E /* ForgotPasswordViewController.swift */,
+				B7EC06D51BDB3B8B0087D04F /* ShareViewController.swift */,
+				B7EC06D71BDB42860087D04F /* ShareBadgeSelectionViewController.swift */,
+				B7E9069C1BF4701F004DB8C3 /* AddGeoLocationViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		B7E684EC1BAA79890009E9F9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B7E684ED1BAA79AD0009E9F9 /* Storyboards */,
+				B7E684C21BAA778E0009E9F9 /* Assets.xcassets */,
+				B7E684C71BAA778F0009E9F9 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B7E684ED1BAA79AD0009E9F9 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B7E684BF1BAA778E0009E9F9 /* Main.storyboard */,
+				B7E684C41BAA778F0009E9F9 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,8 +383,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7E684BE1BAA778E0009E9F9 /* ViewController.swift in Sources */,
+				B7B57FC71BD4A2870013FA96 /* AggroApiRegisterResponse.swift in Sources */,
+				B7B57FC21BD478270013FA96 /* AggroUser.swift in Sources */,
+				B7B57FBA1BD46C3A0013FA96 /* AggroApiConstants.swift in Sources */,
+				B7E87C101BD757C50012B61F /* AggroApiBadges.swift in Sources */,
+				B7B57FC41BD493B30013FA96 /* SwiftyJSON.swift in Sources */,
+				B7B57FB51BD411950013FA96 /* AggroError.swift in Sources */,
+				B7EC06D61BDB3B8C0087D04F /* ShareViewController.swift in Sources */,
 				B7E684BC1BAA778E0009E9F9 /* AppDelegate.swift in Sources */,
+				B78FEDC81BAA872600285CC8 /* WelcomeViewController.swift in Sources */,
+				B7BDEF601BD711DB0036770E /* ForgotPasswordViewController.swift in Sources */,
+				B7B57FB81BD46B9D0013FA96 /* AggroApiClient.swift in Sources */,
+				B7B57FC91BD4B2130013FA96 /* BadgeSelectionViewController.swift in Sources */,
+				B7BDEF5E1BD706500036770E /* RegisterViewController.swift in Sources */,
+				B7B57FC01BD46ECE0013FA96 /* AggroApiLoginResponse.swift in Sources */,
+				B7EC06D81BDB42860087D04F /* ShareBadgeSelectionViewController.swift in Sources */,
+				B7E9069D1BF47022004DB8C3 /* AddGeoLocationViewController.swift in Sources */,
+				B7E87C121BD758010012B61F /* AggroBadge.swift in Sources */,
+				B7B57FBC1BD46C690013FA96 /* AggroApiConvenience.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +540,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Aggro/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.basetech.Aggro;
@@ -407,6 +555,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Aggro/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.basetech.Aggro;
@@ -481,6 +633,7 @@
 				B7E684E21BAA778F0009E9F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B7E684E31BAA778F0009E9F9 /* Build configuration list for PBXNativeTarget "AggroTests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +642,7 @@
 				B7E684E51BAA778F0009E9F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B7E684E61BAA778F0009E9F9 /* Build configuration list for PBXNativeTarget "AggroUITests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +651,7 @@
 				B7E684E81BAA778F0009E9F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

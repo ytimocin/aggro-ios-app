@@ -7,3 +7,23 @@
 //
 
 import Foundation
+
+enum AggroError: Int {
+    
+    case Client  = 0
+    case Network = 1
+    case Server  = 2
+    
+    static func localizedDescription(errorType: AggroError) -> String {
+        
+        switch errorType {
+        case .Client:
+            return "Client Error"
+        case .Network:
+            return "Network Error"
+        case .Server:
+            return "Server Error"
+        }
+        
+    }
+}

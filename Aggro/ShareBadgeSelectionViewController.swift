@@ -8,143 +8,156 @@
 
 import UIKit
 
-class BadgeSelectionTableViewController: UITableViewController {
+class ShareBadgeSelectionViewController: UIViewController, UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate {
     
-    @IBOutlet weak var skipOrAddBadgesButton: UIButton!
+    var activityIndicator: UIActivityIndicatorView!
+    var alertController: UIAlertController!
+    var tapRecognizer: UITapGestureRecognizer? = nil
+    var selectedBadge: String? = ""
+    var lastSelectedIndexPath: NSIndexPath? = nil
+    var badges2Show: [String] = [String]()
+    
     @IBOutlet weak var badgeTableView: UITableView!
+    @IBOutlet weak var cancelOrSelectShareBadge: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateTable", name: "badgeDataUpdated", object: nil)
         
+        activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.White)
+        activityIndicator.center = self.view.center
+        self.view.addSubview(activityIndicator)
+        
+        tapRecognizer = UITapGestureRecognizer(target: self, action: "handleSingleTap")
+        tapRecognizer?.numberOfTapsRequired = 1
+        
         // Set our source and add the tableview to the view
         badgeTableView.delegate = self
         badgeTableView.dataSource = self
         self.view.addSubview(badgeTableView)
         
-        if (AggroApiBadges.sharedInstance().badges.count == 0) {
-            loadData()
+        if AggroApiBadges.sharedInstance().badges.count == 0 {
+            loadAggroBadges()
         } else {
             updateTable()
         }
         
-    }
-    
-    @IBAction func skipOrAddBadges(sender: UIButton) {
-        if selectedBadges.count > 0 {
-            AggroApiClient.sharedInstance().addBadges(selectedBadges) { (result, error) in
-                if result == 0 {
-                    self.goTo("AggroHomeViewController")
-                } else {
-                    dispatch_async(dispatch_get_main_queue(), {
-                        self.showErrorView("Error Adding Badges")
-                    })
-                }
-            }
-        } else {
-            self.goTo("AggroHomeViewController")
-        }
-    }
-    
-    func goTo(controllerName: String) {
-        dispatch_async(dispatch_get_main_queue(), {
-            
-            let controller = self.storyboard!.instantiateViewControllerWithIdentifier("\(controllerName)")
-            
-            self.presentViewController(controller, animated: true, completion: nil)
-            
-        })
-    }
-    
-    func showErrorView(message: String) {
-        
-        let alertController = UIAlertController(title: message, message: message, preferredStyle: .Alert)
-        
-        let okAction = UIAlertAction(title: "OK", style: .Default) { (action) in
-        }
-        alertController.addAction(okAction)
-        
-        dispatch_async(dispatch_get_main_queue()) {
-            self.presentViewController(alertController, animated: true, completion: nil)
+        if AggroApiClient.sharedInstance().selectedShareBadge != "" {
+            selectedBadge = AggroApiClient.sharedInstance().selectedShareBadge
         }
         
+    }
+    
+    @IBAction func cancelOrSelectShareBadge(sender: UIButton) {
+        if selectedBadge != "" {
+            AggroApiClient.sharedInstance().selectedShareBadge = selectedBadge!
+        }
+        self.dismissViewControllerAnimated(true, completion: {});
+    }
+    
+    func updateTable() {
+        self.badgeTableView.reloadData()
     }
     
     // MARK: - Table View and Data Source Delegates
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return AggroApiBadges.sharedInstance().badges.count
+        self.badges2Show = AggroApiClient.sharedInstance().aggroUser.badges!
+        self.badges2Show.append("0")
+        return badges2Show.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = badgeTableView.dequeueReusableCellWithIdentifier("badgeCell") as UITableViewCell!
-        let badge = AggroApiBadges.sharedInstance().badges[indexPath.row]
+        let badgeID: String = badges2Show[indexPath.row]
+        var badgeForCell: AggroBadge = AggroBadge()
+        var cellText: String
+        if badgeID == "0" {
+            badgeForCell.name = "other"
+            badgeForCell.image = "three-dots"
+            cellText = badgeForCell.name!
+        } else {
+            badgeForCell = self.getBadge(badgeID)
+            cellText = badgeForCell.name! + " (\(badgeForCell.users!) users - \(badgeForCell.posts!) posts)"
+        }
         
-        cell.textLabel?.text = badge.name! + " (\(badge.users!) users - \(badge.posts!) posts)"
-        
-        let image : UIImage = UIImage(named: "\(badge.image!)")!
-        cell.imageView!.image = image
-        
-        if cell.selected {
-            selectedBadges.append(badge.badgeID!)
+        if badgeID == selectedBadge {
             cell.accessoryType = UITableViewCellAccessoryType.Checkmark
         }
-        else {
-            cell.accessoryType = UITableViewCellAccessoryType.None
+        
+        cell.textLabel?.text = cellText
+        let cellImage: UIImage = UIImage(named: "\(badgeForCell.image!)")!
+        cell.imageView!.image = cellImage
+        
+        if indexPath.row != lastSelectedIndexPath {
+            if let lastSelectedIndexPath = lastSelectedIndexPath {
+                let oldCell = tableView.cellForRowAtIndexPath(lastSelectedIndexPath)
+                oldCell?.accessoryType = UITableViewCellAccessoryType.None
+            }
+            
+            let newCell = tableView.cellForRowAtIndexPath(indexPath)
+            newCell?.accessoryType = UITableViewCellAccessoryType.Checkmark
+            
+            lastSelectedIndexPath = indexPath
         }
         
         return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let cell = tableView.cellForRowAtIndexPath(indexPath)
-        let badge = AggroApiBadges.sharedInstance().badges[indexPath.row]
         
-        if cell!.selected == true {
-            if !selectedBadges.contains(badge.badgeID!) {
-                selectedBadges.append(badge.badgeID!)
+        if indexPath.row != lastSelectedIndexPath {
+            if let lastSelectedIndexPath = lastSelectedIndexPath {
+                let oldCell = tableView.cellForRowAtIndexPath(lastSelectedIndexPath)
+                badgeTableView.deselectRowAtIndexPath(lastSelectedIndexPath, animated: true)
+                oldCell?.accessoryType = UITableViewCellAccessoryType.None
             }
-            cell!.accessoryType = UITableViewCellAccessoryType.Checkmark
-        }
-        else {
-            cell!.accessoryType = UITableViewCellAccessoryType.None
+            
+            let newCell = tableView.cellForRowAtIndexPath(indexPath)
+            newCell?.accessoryType = UITableViewCellAccessoryType.Checkmark
+            
+            lastSelectedIndexPath = indexPath
         }
         
-        if selectedBadges.count > 1 {
-            skipOrAddBadgesButton.setTitle("add badges", forState: .Normal)
-        } else if selectedBadges.count > 0 {
-            skipOrAddBadgesButton.setTitle("add badge", forState: .Normal)
+        selectedBadge = badges2Show[indexPath.row]
+        
+        if selectedBadge != "" {
+            cancelOrSelectShareBadge.setImage(UIImage(named: "checkmark-green"), forState: UIControlState.Normal)
         } else {
-            skipOrAddBadgesButton.setTitle("skip", forState: .Normal)
+            cancelOrSelectShareBadge.setImage(UIImage(named: "cancel-red"), forState: UIControlState.Normal)
         }
     }
     
     func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        
         let cell = tableView.cellForRowAtIndexPath(indexPath)
-        let badge = AggroApiBadges.sharedInstance().badges[indexPath.row]
+        badgeTableView.deselectRowAtIndexPath(indexPath, animated: true)
+        cell?.accessoryType = UITableViewCellAccessoryType.None
         
-        if cell!.selected == true {
-            cell!.accessoryType = UITableViewCellAccessoryType.Checkmark
-        }
-        else {
-            if selectedBadges.contains(badge.badgeID!) {
-                selectedBadges.removeAtIndex(selectedBadges.indexOf(badge.badgeID!)!)
-            }
-            cell!.accessoryType = UITableViewCellAccessoryType.None
-        }
+        selectedBadge = ""
         
-        if selectedBadges.count > 1 {
-            skipOrAddBadgesButton.setTitle("add badges", forState: .Normal)
-        } else if selectedBadges.count > 0 {
-            skipOrAddBadgesButton.setTitle("add badge", forState: .Normal)
+        if selectedBadge != "" {
+            cancelOrSelectShareBadge.setImage(UIImage(named: "checkmark-green"), forState: UIControlState.Normal)
         } else {
-            skipOrAddBadgesButton.setTitle("skip for now", forState: .Normal)
+            cancelOrSelectShareBadge.setImage(UIImage(named: "cancel-red"), forState: UIControlState.Normal)
         }
     }
     
-    func loadData() {
+    func getBadge(badgeID: String) -> AggroBadge {
+        var aggroBadge: AggroBadge = AggroBadge()
+        
+        for badge in AggroApiBadges.sharedInstance().badges {
+            if badgeID == badge.badgeID {
+                aggroBadge = badge
+                break
+            }
+        }
+        return aggroBadge
+    }
+    
+    func loadAggroBadges() {
         
         AggroApiBadges.sharedInstance().badges.removeAll()
         
@@ -183,11 +196,6 @@ class BadgeSelectionTableViewController: UITableViewController {
             }
         }
     }
-    
-    func updateTable() {
-        self.badgeTableView.reloadData()
-    }
-    
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
